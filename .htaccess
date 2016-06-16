@@ -1,0 +1,46 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteBase /storian/
+
+RewriteRule intro$ Controller/index.php
+RewriteRule modos$ Controller/goTo_seleccionModo.php
+RewriteRule info$ Controller/goTo_info.php
+
+RewriteRule modos/leer$ Controller/goTo_formularioLeeHistoria.php
+RewriteRule modos/escribir$ Controller/goTo_control_acceso.php
+RewriteRule modos/leer/cuento$ Controller/procesaHistoria.php
+
+RewriteRule login$ Controller/goTo_control_acceso.php
+RewriteRule acceso$ Controller/procesarControl.php
+RewriteRule checkUser$ Controller/check-username.php
+RewriteRule checkEmail$ Controller/check-email.php
+RewriteRule registro$ Controller/goTo_formAltaUser.php
+RewriteRule perfil$ Controller/goTo_panel_usuario.php
+RewriteRule alta$ Controller/procesarAltaUsuario.php
+RewriteRule baja$ Controller/eliminaCuenta.php
+
+RewriteRule cierraSesion$ Controller/cierraSesion.php
+RewriteRule grabaHistoria$ Controller/grabarHistoria.php
+
+# Ver PHP errors
+php_flag display_errors off
+php_value error_reporting 6143
+
+
+
+
+</IfModule>
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+AddType image/x-icon .ico
+AddEncoding gzip svgz
+
+<ifModule mod_headers.c>
+<FilesMatch "\.svg$">
+  SetHandler application/x-httpd-php
+  Header set Content-Type "image/svg+xml"
+</FilesMatch>
+</IfModule>

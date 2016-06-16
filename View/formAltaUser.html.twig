@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block contenidoCentral %}
+        <div id="mainForm" class="centered">
+            <form class="cmxform" id="signupForm" method="post" action="alta">
+                <fieldset>
+                    <h2><legend>Registro de usuario</legend></h2>
+                    <p>
+                        <label for="username">Nombre de usuario</label><br>
+                        <input id="username" name="username" type="text">
+                    </p>
+                    <p>
+                        <label for="date">Fecha de Nacimiento</label><br>
+                        <input type="text" id="datepicker" name="date">
+                    </p>
+                    <p>
+                        <label for="email">Email</label><br>
+                        <input id="email" name="email" type="email">
+                    </p>
+                    <p>
+                        <label for="password">Contraseña</label><br>
+                        <input id="password" name="password" type="password">
+                    </p>
+                    <p>
+                        <label for="confirm_password">Repite contraseña</label><br>
+                        <input id="confirm_password" name="confirm_password" type="password">
+                    </p>
+
+                    <p>
+                        <input class="submit" id="registrar" type="submit" value="Registrarme" >
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+{% endblock contenidoCentral %}

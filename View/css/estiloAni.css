@@ -1,0 +1,594 @@
+/* ANIMACIONES */
+@keyframes balanceo{
+    0%{transform: rotate(0deg) translate(-50%,-100%) ;}
+    25%{transform: rotate(2deg)translate(-50%,-100%) ; }
+    50%{transform: rotate(0deg)translate(-50%,-100%); }
+    75%{transform: rotate(2deg)translate(-50%,-100%);}
+    100%{transform: rotate(0deg)translate(-50%,-100%);}
+}
+@keyframes balanceo_simple{
+    0%{transform: rotate(0deg) ;}
+    25%{transform: rotate(1deg) ; }
+    50%{transform: rotate(0deg); }
+    75%{transform: rotate(1deg);}
+    100%{transform: rotate(0deg);}
+}
+/*
+Desactivado por problemas de rendimiento
+@keyframes traslado{
+    0%{left: 0;}
+    25%{left: -20px;}
+    50%{left: 0;}
+    75%{left: -20px;}
+    100%{left: 0;}
+}
+*/
+/* FIN ANIMACIONES */
+
+
+
+/* FUENTES */
+@font-face{
+    font-family: titulo;
+    src:url('../fonts/EileenCaps-Black.ttf') format('truetype');
+}
+@font-face{
+    font-family: tituloTablon;
+    src:url('../fonts/cronic.ttf') format('truetype');
+}
+/* FIN FUENTES */
+
+
+/*  =====================================  VERSION PC */
+/*  Me sirve para chivar a jquery si esta en modo responsive, 0 = pc */
+
+#checkerResponsive{
+    position: absolute;
+    z-index: 0;
+}
+/*  MENUS VISUAL */
+html{
+    cursor: url(../Assets/img/cursor2.png), auto;
+    overflow: hidden;
+}
+#cuerdaAcciona:hover{
+    cursor: url(../Assets/img/cursor2Select.png), auto;
+}
+input:hover{
+    cursor: url(../Assets/img/Arrow.png), auto;
+}
+body {
+    background-image: url(../Assets/img/fondo4.jpg);
+    background-color: black;
+    background-position: center center;/*Bg completamente centrado*/
+    background-repeat: no-repeat;/*Evita repeticiones*/
+    background-size: cover;/*Provoca que bg cubra todo*/
+    background-attachment: fixed;/*Si hay contenido mas alto, bg fijo*/
+    text-align: center;
+    overflow: hidden;
+
+}
+/* FIN MENUS VISUAL */
+
+
+/* CONTENEDOR HISTORIA ESCRITA */
+#contenedorHistoria{
+    position: absolute;
+    background-image: url(../Assets/img/papiro3b.png);
+    background-size: cover;
+    height: 840px; /*840px*/
+    width: 650px;  /* 650px */
+    z-index: 10;
+    top: 15px;
+    display: none;
+}
+#marginado{
+    position: absolute;
+    height: 640px;
+    top: 97px;
+    left: 20px;
+    width: 90%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-line;
+}
+#tituloHistoria{
+    font-family: tituloTablon;
+    font-size: 46px;
+}
+#contenidoHistoria{
+    font-family: sans-serif;
+    font-size: 23px;
+    text-align: left;
+    margin-left: 40px;
+}
+#contenidoHistoria:first-letter{
+    font-size: 110px;
+    font-family: titulo;
+}
+/*  Imagenes fondo cuento */
+#imgP1{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width:400px;
+    height: 400px;
+    /*background-image: url(../Assets/img/pajaro.png);*/
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+#imgP2{
+    position: absolute;
+    top: 990px;
+    left:190px;
+    width:400px;
+    height: 400px;
+    /*background-image: url(../Assets/img/elefante.png);*/
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+/* FIN CONTENEDOR HISTORIA ESCRITA */
+
+
+
+/* FORMULARIO LEER HISTORIA */
+.grupContenedores{
+    position: relative;
+    background-image: url(../Assets/img/tablon.png);
+    background-size: cover;
+    height: 305px  /*21vw*/;
+    width: 427px;
+    z-index: 2;
+}
+.conteneLimite{
+    position: relative;
+    width: 400px;
+    padding-left: 10px;
+    padding-top:62px;
+    overflow: hidden;
+}
+#contenedor0{
+    top: 0px;
+}
+#contenedor{
+    top: -25vh; /* -150px*/
+}
+#contenedor2{
+    top: -50vh; /* -300px */
+}
+#contenedor3{
+    top: -75vh; /* -450px*/
+}
+.tituloGrande{
+    margin-top: 20px /*2vw*/ ;
+    font-family: tituloTablon;
+    font-size: 60px;    /* 6vw */
+}
+.tituloTabla{
+    font-family: tituloTablon;
+    font-size: 40px; /*3.3vw*/
+}
+
+.subTitTabla{
+    font-family: tituloTablon;
+    font-size: 30px; /* 2.6vw */
+}
+.DescTabla{
+    font-family: tituloTablon;
+    font-size: 29px; /* 2.5w */
+    font-style: italic;
+}
+input,select{
+    background-color: #907c50;
+    font-size: 25px;
+    width: 120px;
+}
+hr{
+    border-color: black;
+    width: 10vw;
+}
+#tablaDatos{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.tips{
+    position: relative;
+    display: none;
+    background-color: darkred;
+    width: 100%;
+    height: 50px;
+    top: 35px;
+}
+#alerta{
+    position: absolute;
+    background-color: #ffffff;
+    width: 15%;
+    padding: 1%;
+    min-width: 300px;
+    left: 40%;
+    top: 300px;
+    z-index: 99;
+    border-radius: 4px;
+    border-bottom:2px solid #393939;
+    border-right:2px solid #393939;
+    display: none;
+    color: black;
+    text-align: center;
+}
+#fondoAlerta{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    left:0;
+    top:0;
+    margin: 0;
+    display: none;
+}
+/* FIN FORMULARIO LEER HISTORIA */
+
+
+
+/* ESTRUCTURA CUERDA Y RUEDA */
+#cuerda{
+    position: relative;
+    background-image: url(../Assets/img/Rope-01.png);
+    background-size:contain;
+    height:250vmax; /* 140vw*/
+    width: 20px;
+    left: 45%;;
+    top: 0%; /* -140vw -220vh*/
+    z-index: 0;
+    transform: translateY(-100%);
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+#pack{
+    position: absolute;
+    top: 50%;
+    height:1091px;
+    left: 50%;
+
+    animation-name: balanceo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+#box{
+    position:absolute;
+    top:50%;
+    left:44vw;
+    width:50px;
+    height:800px;
+    border-bottom:3px solid black;
+    background-color:red;
+
+    animation-name: balanceo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+#cuerdaAcciona{
+    position: absolute;
+    background-image: url(../Assets/img/Rope-01.png);
+    background-size:contain;
+    height:120vh; /* 900px */
+    width: 20px;
+    top: 75%;/*-220px*/
+    transform: translateY(-100%);
+    margin-left: 80%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    z-index: -1;
+}
+#punta{
+    position: relative;
+    width: 50px;
+    height: 180px;
+    left: -65%;
+    background-image: url(../Assets/img/pull2.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    top: 98.5%;
+
+    animation-name: balanceo_simple;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+#rueda1{
+    position: absolute;
+    background-image: url(../Assets/img/wheelMetal.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 19vw;
+    width: 19vw;
+    margin-left: 62.5%;
+    top: -11vw;
+    z-index: -1;
+    transition: transform 4s ease-in-out;
+    -webkit-transition: -webkit-transform 4s ease-in-out;
+    -o-transition: -o-transform 4s ease-in-out;
+}
+#rueda2{
+    position: absolute;
+    background-image: url(../Assets/img/wheel.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 40vw;
+    width: 40vw;
+    left: -290px;
+    bottom: -310px;
+    z-index: 1;
+    transition: transform 4s ease-in-out;
+    -webkit-transition: -webkit-transform 4s ease-in-out;
+    -o-transition: -o-transform 4s ease-in-out;
+}
+/* Desactivado el movimiento lateral de los carteles
+#packsMov{
+    position: relative;
+    width: 99%;
+    animation-name: traslado;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+*/
+/* ESTRUCTURA CUERDA Y RUEDA */
+
+/* CORTINA Y LOADING */
+#fondoCortina{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.cortina{
+    position: absolute;
+    background-image: url(../Assets/img/cortinaB.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 95vh; /* 100%*/
+    width: 65vw;  /* 80% */
+    z-index: 50;
+}
+#cortinIzq{
+    top: 0;
+    left: -80%;   /*-80%*/
+}
+#cortinDcha{
+    top: 0;
+    left: 105%;
+}
+#loading{
+    background-image:url(../Assets/img/loading.svgz);
+    position: absolute;
+    top: 30%;
+    width: 20vmax;
+    height: 20vmax;
+    background-size: cover;
+    z-index: 60;
+    display: none;
+    font-family: tituloTablon;
+}
+#loading div{
+    position: absolute;
+    top: 100%;
+    white-space: pre;
+    margin: 0 auto;
+    font-size: 3vmax;
+    color: white;
+}
+/* FIN CORTINA Y LOADING */
+
+
+
+
+/* ESTILO SCROLLBAR */
+#marginado::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(126, 109, 72, 0.11);
+}
+
+#marginado::-webkit-scrollbar{
+    width: 12px;
+    background-color: rgba(245, 245, 245, 0);
+}
+
+#marginado::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #7e6d48;
+}
+/* FIN ESTILO SCROLLBAR */
+
+
+
+/* PANEL USUARIO Y DIRECCION */
+#panelUsu{
+    position: fixed;
+    right: 0;
+    top: -45px;
+    min-width:100px;
+    min-height: 25px;
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: white;
+    border-bottom-left-radius: 10px;
+    z-index: 25;
+}
+#panelUsu:hover{cursor: url(../Assets/img/cursor2Select.png), auto;}
+
+#panelDireccion{
+    position: fixed;
+    left: 3px;
+    top: -150px;
+    width: 50px;
+    height: 195px;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 25;
+}
+#panelDireccion a{
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+}
+/* Si añado mas iconos, cambiar animatios-menus.js:333 */
+#panelDireccion #menu{
+    bottom: 160px;
+}
+#panelDireccion #refresh{
+    bottom: 125px;
+}
+#panelDireccion #home{
+    bottom: 85px;
+}
+#panelDireccion #icoMute{
+    bottom: 45px;
+}
+#panelDireccion #arrow{
+    bottom: 5px;
+}
+/* FIN PANEL USUARIO */
+
+
+/* GENERAL (centra historia)*/
+.centered{
+    position: fixed;
+    top: 50%;
+    left: 50%;/* bring your own prefixes */
+    transform: translate(-50%, -2%);
+}
+.centeredHorizontal{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* VERSION MOVIL  =====================================   */
+/* Portrait */
+@media screen and (min-width:0px) and (max-width:480px) and (orientation: portrait){
+    /*  Me sirve para chivar a jquery si esta en modo responsive, 2 = movil */
+    #checkerResponsive{
+        position: absolute;
+        z-index: 2;
+    }
+    /* Hacer mas pequeños los contenedores */
+    .grupContenedores{
+        height: 290px  /*21vw*/;
+        width: 400px; /* 305 x 427 */
+    }
+    /* Poner la cuerda de tirones por encima, y un poco a la derecha */
+    #cuerdaAcciona{
+        z-index: 2;
+        left: 8%;
+    }
+    #pack{
+        top: 60%;
+    }
+    #contenidoHistoria{
+        font-family: sans-serif;
+        font-size: 4.5vmin;
+        text-align: left;
+        margin-left: 26%; /*  25x15*/
+        margin-right: 20%;
+        -webkit-margin-before:0em;
+-webkit-margin-after:0em;
+    }
+    #tituloHistoria{
+        font-size: 6vmax;
+        margin-left: 37vw;
+        margin-right: 27vw;
+    }
+    #loading div{
+        font-size: 6vmax;
+    }
+    #contenidoHistoria:first-letter{
+        font-size: 70px;
+    }
+}
+/* Movil Landscape */
+@media screen and (min-width:481px) and (max-width:736px) and (orientation: landscape){
+    /*  Me sirve para chivar a jquery si esta en modo responsive, 20 = movil landscape */
+    #checkerResponsive{
+        position: absolute;
+        z-index: 20;
+    }
+    /* Hacer mas pequeños los contenedores */
+    .grupContenedores{
+        height: 290px  /*21vw*/;
+        width: 400px; /* 305 x 427 */
+    }
+    /* Poner la cuerda de tirones por encima, y un poco a la derecha */
+    #cuerdaAcciona{
+        z-index: 2;
+        left: 8%;
+    }
+    #pack{
+        top: 70%;
+    }
+    #contenidoHistoria{
+        font-family: sans-serif;
+        font-size: 4.5vmin;
+        text-align: left;
+        margin-left: 20vmin;/* 35x20 */
+        margin-right: 12vmin;
+    }
+    #loading div{
+        font-size: 4vmax;
+    }
+    #contenidoHistoria:first-letter{
+        font-size: 70px;
+    }
+}
+
+/*  VERSION TABLET =====================================  */
+/* Portrait */
+@media screen and (min-width:481px) and (max-width:960px) and (orientation: portrait){
+    /*  Me sirve para chivar a jquery si esta en modo responsive, 1 = tablet */
+    #checkerResponsive{
+        position: absolute;
+        z-index: 1;
+    }
+    #cuerdaAcciona{
+        z-index: 2;
+    }
+    #contenidoHistoria{
+        font-family: sans-serif;
+        font-size: 19px;
+        text-align: left;
+        margin-left: 9vw; /*  25x15*/
+        margin-right: 4vw;
+    }
+}
+/* Landscape */
+@media screen and (min-width:736px) and (max-width:1024px) and (orientation: landscape){
+    /*  Me sirve para chivar a jquery si esta en modo responsive, 1 = tablet */
+    #checkerResponsive{
+        position: absolute;
+        z-index: 10;
+    }
+    #cuerdaAcciona{
+        z-index: 2;
+    }
+    #contenidoHistoria{
+        font-family: sans-serif;
+        font-size: 19px;
+        text-align: left;
+        margin-left: 16vmin;
+        margin-right: 12vmin;
+    }
+}

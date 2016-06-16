@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Bienvenido a Storian</title>
+        <script src="../View/js/jquery.js"></script>
+        <script src="../View/js/typed.js"></script>
+        <script src="../View/js/jquery-ui.min.js"></script>
+        <script src="../View/js/animatios-menus.js"></script>
+        <link rel="stylesheet" type="text/css" href="../View/css/estiloAni.css">
+        <link rel="stylesheet" type="text/css" href="../View/css/jquery-ui.css">
+        <link rel="shortcut icon" href="/storian/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/storian/favicon.ico" type="image/x-icon">
+
+    </head>
+
+    <body >
+
+        <div id="checkerResponsive"></div>
+
+         <audio  loop id="forest">
+                <source src="../View/Assets/music/forest.mp3">
+        </audio>
+        <div id="panelUsu">Panel<br>de<br><span><img src="/storian/View/Assets/img/userWhite.svgz" height="22px" width="22px" >{{nombreUsuario}}</span></div>
+        <div id="panelDireccion">
+          <a  id="menu" href="/storian/modos" title="Seleccion de modos" ><img src="../View/Assets/img/menu.svgz" height="25px" width="25px" ></a>
+          <a  id="refresh" href="#" title="Leer otro cuento" onclick='location.reload(true); return false;'><img src="../View/Assets/img/read.svgz" height="25px" width="25px" ></a>
+          <a  id="home" href="/storian/intro" title="Ir a Lluvia" ><img src="../View/Assets/img/rain.svgz" height="25px" width="25px" ></a>
+          <a  id="icoMute" title="Mute" ><img  src="../View/Assets/img/playing.svgz" height="25px" width="25px" ></a>
+          <a  id="arrow" title="Deslizar" ><img  src="/storian/View/Assets/img/down.svgz" height="25px" width="25px" ></a>
+        </div>
+        <div id="loading" class="centered"></div>
+
+
+        <div id="contenedorHistoria" class="centered" >
+            <div id="marginado" >
+                <div id="imgP1" ></div>
+                <div id="imgP2" ></div>
+                <p id="tituloHistoria"></p>
+                <p id="contenidoHistoria"></p>
+            </div>
+        </div>
+            <div id="pack">
+                <div id="contenedor3" class="grupContenedores " >
+                    <div class="conteneLimite">
+                        <table id="tablaDatos">
+                            <thead><span class="tituloTabla">Escenario</span></thead>
+                            <hr>
+                            <tr>
+                                <td><span class="subTitTabla">Lugar</span></td>
+                                <td><select id="lugar">
+                                        <option value="castillo">Castillo</option>
+                                        <option value="playa">Playa</option>
+                                        <option value="montaña">Montaña</option>
+                                        <option value="cueva">Cueva</option>
+                                        <option value="bosque">Bosque</option>
+                                        <option value="cueva">Cueva</option>
+                                        <option value="colegio">Colegio</option>
+                                        <option value="jardin">Jardin</option>
+                                        <option value="lago">Lago</option>
+                                        <option value="museo">Museo</option>
+                                        <option value="valle">Valle</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div id="contenedor2" class="grupContenedores" >
+                    <div class="conteneLimite">
+                        <table id="tablaDatos">
+                            <thead><span class="tituloTabla">Secundario</span></thead>
+                            <hr>
+                            <tr>
+                                <td><span class="subTitTabla">Nombre</span></td>
+                                <td><input id="nombP2" class="nomb"></td>
+                            </tr><tr>
+                                <td><span class="subTitTabla">Tipo</span></td>
+                                <td><input id="tipoP2" class="tipo"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="contenedor" class="grupContenedores" >
+                    <div class="conteneLimite">
+                        <table id="tablaDatos">
+                            <thead><span class="tituloTabla">Protagonista</span></thead>
+                            <hr>
+                            <tr>
+                                <td><span class="subTitTabla">Nombre</span></td>
+                                <td><input id="nombP1" class="nomb"></td>
+                            </tr><tr>
+                                <td><span class="subTitTabla">Tipo</span></td>
+                                <td><input id="tipoP1" class="tipo"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="contenedor0" class="grupContenedores" >
+                    <div class="conteneLimite">
+                        <div class="tituloGrande">Bienvenido </div>
+                        <div class="subTitTabla"> (toca la cuerda)</div>
+                    </div>
+                </div>
+                <div id="cuerda"></div>
+            </div>
+
+        <div id="fondoAlerta"></div>
+        <div id="fondoCortina"></div>
+        <div id="cuerdaAcciona">
+            <div id="punta"></div>
+        </div>
+        <div id="rueda2"></div>
+        <div id="rueda1"></div>
+        <div id="gancho"></div>
+    </body>
+</html>

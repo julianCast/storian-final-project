@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block contenidoCentral %}
+<div id="contenedorAsistente" class="centered dialogs" >
+    <span class="tituloAsistente">Asistente del Escritor</span><hr>
+    <span class="subTiAsistente" >¿Quieres añadir tu propia historia a Storian?</span><br><br>
+    <div class="contenidoAsistente" ><i>Storian</i> tiene alojadas historias magicas que son capaces de transformarse con las caracteristicas que cada uno quiera.<br>
+        Aunque usamos un algoritmo complejo, con este asistente podras añadir la tuya propia sin tener conocimientos de programacion.
+    </div><br>
+    <input  type="submit" id="comenzar" class="btnAsistente" value="Comenzar >"></input>
+</div>
+
+<div id="tapP1" class="centered dialogs" >
+    <span class="tituloAsistente">Asistente del Escritor</span><hr>
+    <span class="subTiAsistente" >Seleccion de personajes y lugar </span><br><br>
+    <div class="contenidoAsistente" >En primer lugar, para que nos sirva de referencia, rellena las casillas de los <b>personajes</b> y el <b>lugar</b>.<br>
+        ¡No te preocupes, tu historia sera tan adaptable como las demas en Storian!
+        Aunque es recomendable dos personajes, si tu historia solo tiene un personaje, deja el personaje 2 como esta.
+    </div>
+
+    <table border="0" cellspacing="10" cellpadding="10" >
+        <tr>
+            <td>
+                
+                <table border="0" style ="border-collapse: collapse" >
+                    <tr><th colspan="2" >PROTAGONISTA</th></tr>
+                    <tr>
+                        <td>NOMBRE</td><td><input type="text" placeholder="'David'" id="nombP1" class="input"></input></td>
+                    </tr>
+                    <tr>
+                        <td>TIPO</td><td><input type="text" placeholder="'perro'" id="tipoP1" class="input"></input></td>
+                    </tr>
+                </table>
+
+            </td>
+            <td>
+                
+                <table border="0" style ="border-collapse: collapse">
+                    <tr><th colspan="2" >SECUNDARIO</th></tr>
+                    <tr>
+                        <td>NOMBRE</td><td><input type="text" placeholder="Nombre Personaje 2" id="nombP2" class="input" value="Maria"></input></td>
+                    </tr>
+                    <tr>
+                        <td>TIPO</td><td><input type="text" placeholder="Tipo Personaje 2" id="tipoP2" class="input" value="ratita"></input></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                
+                <table border="0" style ="border-collapse: collapse">
+                    <tr><th colspan="2" >LUGAR</th></tr>
+                    <tr>
+                        <td>SELECCIONA</td>
+                        <td><select id="nomLug">
+                                <option>Castillo</option>
+                                <option>Cueva</option>
+                                <option>Playa</option>
+                                <option>Casa</option>
+                                <option>Montaña</option>
+                            </select><br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table >
+    <input  type="submit" id="aceptar" class="btnAsistente" value=">>"></input>
+</div>
+
+
+<div id="botonesMagicos" class="centered dialogs" >
+
+
+
+    <div class="contenidoAsistente" >
+        <table border="0" cellspacing="2" cellpadding="2" style="margin: 0 auto;" >
+            <tr>
+                <td>
+                    <table  class="tabBotones" border="1" style ="border-collapse: collapse; text-align: center" >
+                        <tr>
+                            <th colspan="7">PERSONAJE PRINCIPAL</th>
+                        </tr>
+                        <tr>
+                            <th>Nombre</th><th>Tipo</th><th>Genero</th><th>El | La</th><th>el | ella</th><th>un | una</th><th>lo | la</th>
+                        </tr>
+                        <tr>
+                            <td><button id="nombP1i" class="boton" value="NOMBRE 1">NOMBRE 1</button></td>
+                            <td><button id="tipoP1i" class="boton" value="TIPO 1">TIPO 1</button></td>
+                            <td><button id="oaP1" class="boton" value="OA">OA</button></td>
+                            <td style="min-width:65px" ><button id="artDetP1m" class="boton" value="EL/LAm">El/La</button>  <button id="artDetP1" class="boton" value="EL/LA">el/la</button></td>
+                            <td><button id="pronP1" class="boton" value="ÉL/ELLA">ÉL/ELLA</button></td>
+                            <td><button id="detIndP1" class="boton" value="UN/UNA">UN/UNA</button></td>
+                            <td><button id="neutP1" class="boton" value="LA/LO">LA/LO</button></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tabBotones" border="1" style ="border-collapse: collapse; text-align: center;" >
+                        <tr>
+                            <th colspan="7">PERSONAJE SECUNDARIO</th>
+                        </tr>
+                        <tr>
+                            <th>Nombre</th><th>Tipo</th><th>Genero</th><th>El | La</th><th>el | ella</th><th>un | una</th><th>lo | la</th>
+                        </tr>
+                        <tr>
+                            <td><button id="nombP2i" class="boton" value="NOMBRE 2">NOMBRE 2</button></td>
+                            <td><button id="tipoP2i" class="boton" value="TIPO 2">TIPO 2</button></td>
+                            <td><button id="oaP2" class="boton" value="OA">OA</button></td>
+                            <td style="min-width:65px" ><button id="artDetP2m" class="boton" value="EL/LAm">El/La</button>  <button id="artDetP2" class="boton" value="EL/LA">el/la</button></td>
+                            <td><button id="pronP2" class="boton" value="ÉL/ELLA">ÉL/ELLA</button></td>
+                            <td><button id="detIndP2" class="boton" value="UN/UNA">UN/UNA</button></td>
+                            <td><button id="neutP2" class="boton" value="LA/LO">LA/LO</button></td>
+                        </tr>       
+                    </table>
+                </td>
+                <td>
+                    <table class="tabBotones" border="1" style ="border-collapse: collapse; text-align: center;" >
+                        <tr>
+                            <th colspan="5">LUGAR</th>
+                        </tr>
+                        <tr>
+                            <th style="min-width:65px" >El | la</th><th>Tipo</th><th style="min-width:65px" >un | una</th><th>Genero</th>
+                        </tr>
+                        <tr>
+                            <td style="min-width:68px" ><button id="artDetLum" class="boton" value="EL/LAmL">El/La</button>  <button id="artDetLu" class="boton" value="EL/LA">el/la</button></td>
+                            <td> <button id="nomLui" class="boton" value="LUGAR">Lugar</button></td>
+                            <td><button id="detIndLu" class="boton" value="UN/UNAL">un/una</button></td>
+                            <td><button id="oaLu" class="boton" value="OA">OA</button></td>
+                        </tr>       
+                    </table>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
+<div id="cuadroTexto" class="centeredHorizontal dialogs" >
+
+
+    <span class="subTiAsistente" >Area de trabajo</span><br><br>
+    <div class="contenidoAsistente" >
+        <table border="0" cellspacing="2" cellpadding="2" style="margin: 0 auto;" >
+            <tr>
+                <td>Titulo:<input id="titulo" ></input> - <button id="titulobtn">GUARDAR TITULO</button></td>
+                <td>Titulo:<span id="titulado"></span></td>
+            </tr>
+            <tr>
+                <td><textarea id="historia"></textarea></td>
+                <td><p id="resultado"></p></td>
+            </tr>
+
+        </table>
+        <br>
+        <input type="hidden" id="autorHidden" value={{nombreUsuario}}>
+        <button id="enviaCuento" class="btnAsistente">ENVIAR HISTORIA</button>
+    </div>
+
+</div>
+        {% endblock contenidoCentral %}

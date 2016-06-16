@@ -1,0 +1,13 @@
+ellaProtaM+tipoProta+" amaestrad" + oaProta +  ".<br><br>"
++" Un ladrón que rondaba " + unnaLugar + lugar + " en torno a un campamento militar, robó " + unnaProta + " hermos" + oaProta +  " "+tipoProta+" aprovechando la oscuridad de la noche. Por la mañana, cuando se dirigía a "+ellaLugar+lugar+", pasó por el camino un batallón de "+tipoMalo+"s que estaba de maniobras.<br> "
++ "Al escuchar los tambores,"+ ellaProta+tipoProta+" escapó y, junto a los de las tropa, fue realizando los fabulosos ejercicios para los que había sido amaestrad"+oaProta+".<br><br>" +
+
+"- ¡"+ellaProtaM+" caballo es nuestro! Exclamó el capitán-"+tipoMalo+". De lo contrario no sabría realizar los ejercicios. ¿Lo has robado tú? Le preguntó al ladrón.<br>" +
+"- ¡Oh, yo...! Lo compré en la feria a un tratante...<br>" +
+"- Entonces, dime como se llama inmediatamente ese individuo para ir en su busca, pues ya no hay duda que ha sido robad"+oaProta+".<br><br>" +
+
+"El ladrón se puso nervioso y no acertaba a articular palabra. Al fin, viéndose descubierto, confesó la verdad.<br><br>" +
+
+"- ¡Ya me parecía a mí, exclamo el capitán-"+tipoMalo+", que este noble ser no podía pertenecer a un rufián como tú!<br><br>" +
+
+"  El ladrón fue detenido, con lo que se demuestra que el robo y el engaño rara vez quedan sin castigo.";

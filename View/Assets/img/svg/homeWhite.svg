@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xml:space="preserve"
+   width="16px"
+   viewBox="0 0 16 16"
+   version="1.1"
+   style="enable-background:new 0 0 16 16;"
+   id="Layer_1"
+   height="16px"><metadata
+     id="metadata9"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs7" /><path
+     style="stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:1"
+     id="path3"
+     d="M 15.45,7 14,5.551 14,2 C 14,1.45 13.55,1 13,1 L 12,1 C 11.45,1 11,1.45 11,2 L 11,2.553 9,0.555 C 8.727,0.297 8.477,0 8,0 7.523,0 7.273,0.297 7,0.555 L 4.8616087,2.6917337 0.55,7 C 0.238,7.325 0,7.562 0,8 0,8.563 0.432,9 1,9 l 1,0 0,6 c 0,0.55 0.45,1 1,1 l 3,0 0,-5 c 0,-0.55 0.45,-1 1,-1 l 2,0 c 0.55,0 1,0.45 1,1 l 0,5 3,0 c 0.55,0 1,-0.45 1,-1 l 0,-6 1,0 C 15.568,9 16,8.563 16,8 16,7.562 15.762,7.325 15.45,7 Z" /></svg>

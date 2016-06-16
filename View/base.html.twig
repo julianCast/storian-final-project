@@ -1,0 +1,75 @@
+
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Storian :: Generador de Historias</title>
+
+        <link rel="stylesheet" type="text/css" href="/storian/View/css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="/storian/View/css/cmxform.css">
+        <link rel="stylesheet" type="text/css" href="/storian/View/css/jquery-ui.css">
+        <link rel="shortcut icon" href="/storian/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/storian/favicon.ico" type="image/x-icon">
+
+        <script src="/storian/View/js/jquery.js"></script>
+        <script src="/storian/View/js/validAlta.js"></script>
+        <script src="/storian/View/js/jquery.validate.min.js"></script>
+        <script src="/storian/View/js/jquery-ui.min.js"></script>
+        <script src="/storian/View/js/animatios-menus.js"></script>
+        <script src="/storian/View/js/estructura.js"></script>
+        <script src="/storian/View/js/rainyday.min.js"></script>
+        <script src="/storian/View/js/rainApp.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="/storian/View/js/infoApp.js"></script>
+   </head>
+
+    <body >
+        {% block navSuperior %}
+        <span id="alertaOn" >{{alert}}</span>
+
+            <div id="panelUsu">Panel<br>de<br><span><img src="/storian/View/Assets/img/userWhite.svgz" height="22px" width="22px" >{{nombreUsuario}}</span></div>
+            <div id="panelDireccion">
+              <a  id="menu" href="/storian/modos" title="Seleccion de modos" ><img src="/storian/View/Assets/img/menu.svgz" height="25px" width="25px" ></a>
+              <a  id="refresh" title="Información sobre Storian" href="/storian/info"><img src="/storian/View/Assets/img/info.svgz" height="25px" width="25px" ></a>
+              <a  id="home" href="/storian/intro"title="Ir a la Lluvia" ><img src="/storian/View/Assets/img/rain.svgz" height="25px" width="25px" ></a>
+              <a  id="icoMute" title="Mute" ><img  src="/storian/View/Assets/img/playing.svgz" height="25px" width="25px" ></a>
+              <a  id="arrow" title="Deslizar" ><img src="/storian/View/Assets/img/down.svgz" height="25px" width="25px" ></a>
+            </div>
+            {% endblock %}
+
+
+        {% block EnviromentArea %}
+            <div id="fondoNegro" ></div>
+            <!--
+            <video autoplay id="sampleMovie"  loop>
+                <source  src="/storian/View/Assets/video/rain10s.webm" type="video/webm" >
+                <source  src="/storian/View/Assets/video/rain10s.mp4" type="video/mp4" >
+            </video>
+            -->
+            <img id="thunderLayer" src="/storian/View/Assets/img/whiteflash.jpg">
+            <img id="background" src="">
+             <audio  id="rain"  autoplay loop>
+                <source src="/storian/View/Assets/music/rainv2.mp3" volume= "0.1">
+            </audio>
+        {% endblock %}
+
+        {% block contenidoCentral %}
+            <div id="contenedorModos" class="centered">
+                <a  href="/storian/modos/escribir"><div id="modoEscribe" class="modos">ESCRIBIR</div></a>
+                <a href="/storian/modos/leer"><div id="modoLee" class="modos">LEER</div></a>
+            </div>
+        {% endblock %}
+        <script>
+        /* Reemplaza visualmente la url de la barar, para evitar ver /storian/acceso */
+        var ruta = window.location.pathname;
+        if (ruta == '/storian/modos/acceso'){
+          window.history.pushState('page2', 'Title', '/storian/modos');
+        }
+
+        </script>
+
+
+    </body>
+</html>

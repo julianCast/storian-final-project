@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block contenidoCentral %}
+    <div id="panelUsuDetalle" class="centeredHorizontal">
+        <div id="modoEscribe">
+            <div class="tit">PANEL USUARIO</div><br><hr>
+            <ul><u>Informacion de usuario</u><br><br>
+                <li>Nombre : <span id="nomUser" >{{datosUsuario.nombre}}</span></li>
+                <li>Email : {{datosUsuario.email}}</li>
+                <li>Lugar de nacimiento : {{datosUsuario.lugarNac}}</li>
+                <li>Fecha de nacimiento : {{datosUsuario.fecNac}}</li>
+                <li>Fecha de alta : {{datosUsuario.fecAlt}}</li>
+                <li>Cuentos escritos : {{datosUsuario.numHist}}</li>
+                <li>Cuentos leidos : {{datosUsuario.numHistLeidas}}</li>
+                <input  style="left: 50px" type="button" class="btnAsistente" value="Cerrar sesion" id="btn_salir"></input>
+                <input  style="background-color: darkred" type="button" class="btnAsistente" value="ELIMINAR CUENTA" id="btn_delete"></input>
+            </ul>
+            <div></div>
+        </div>
+    </div>
+
+{% endblock contenidoCentral %}

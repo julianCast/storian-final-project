@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block contenidoCentral %}
+
+  <div ng-app="infoApp">
+  <div ng-controller="InfoController as infos" >
+   <div id="contenedorAsistente" class="centered dialogs" style="background-color: #1a1a1a; color: white" >
+    <span class="tituloAsistente">About Storian</span><hr>
+    <span class="subTiAsistente" >What is Storian ?</span><br><br>
+
+
+    <div class="contenidoAsistente" ><i>Storian</i> is a web project based on old customizable books,
+        where the children name was written right on the paper, so the main character was the reader.
+        We believe we improved that version, adding the advantages that bring us computers, with the posibility of choosing another character, with custom type and name, and a place, showing illustrations of the character, the place, and listening music in the background; <br>
+        On Storian, nothing is predefined.
+    </div><br>
+    <input  type="submit" id="comenzar" class="btnAsistente" value="Features"></input>
+</div>
+
+    <div id="tapP1" class="centered dialogs" style="background-color: #1a1a1a; color: white" >
+    <span class="tituloAsistente">About Storian</span><hr>
+    <span class="subTiAsistente" >Features: </span><br>
+
+    <div class="contenidoAsistente" >
+
+        <ul>
+          <li ng-repeat="list in infos.lists">{[{ list }]}</li>
+        </ul>
+
+        <span class="subTiAsistente" >Soon: </span><br>
+        <ul>
+          <li ng-repeat="listsSoon in infos.listsSoon"  >{[{ listsSoon }]}</li>
+        </ul>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+/**********************************
+
+Name: cmxform Styles
+
+***********************************/
+form.cmxform {
+    width: 370px;
+    font-size: 1.0em;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+
+form.cmxform legend {
+    padding-left: 0;
+}
+
+form.cmxform legend, form.cmxform label {
+    color: #ffffff;
+}
+
+form.cmxform fieldset {
+    border: none;
+    border-radius: 10px;
+    border-top: 3px solid #C9DCA6;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+form.cmxform fieldset fieldset {
+    background: none;
+}
+
+form.cmxform fieldset p, form.cmxform fieldset fieldset {
+    padding: 5px 10px 7px; 
+    background: url(../Assets/img/cmxform-divider.gif) left bottom repeat-x;
+}
+
+form.cmxform label.error, label.error {/* remove the next line when you have trouble in IE6 with labels in list */
+    color: #921010;
+    font-style: italic;
+    font-weight: 100;
+}
+div.error { display: none; }
+input {	border: 1px solid black;background-color: rgba(0, 0, 0, 0.2);color: #ffffff; }
+input.checkbox { border: none;  }
+input:focus { border: 1px dotted black;}
+input.error { border: 1px dotted red;background-color:#f59d9d }
+form.cmxform .gray * { color: gray; }

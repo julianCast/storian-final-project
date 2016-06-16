@@ -1,0 +1,769 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+
+/*  =====================================  VERSION PC */
+
+/* Pagina final formulario_envio_historia */
+#titulo{
+    width: 150px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+#historia{
+    width:40vw; /* 750px */
+    height: 47vh; /* 450px*/
+    resize: none;
+    padding: 0;
+}
+#titulado{
+    min-width: 150px;
+    height: 20px;
+}
+#resultado{
+    width:40vw; /* 750px*/
+    height: 47vh; /* 450px*/
+    padding: 0;
+    background-color: #d8ba67;
+    color: black;
+}
+#resultado,#titulado{
+    font-size: 20px;
+    border: 1px solid black;
+    overflow: auto;
+    white-space: pre-line;   /* Se ven los intros del text area al resultado */
+}
+.input{
+    height: 2vmax;
+    max-height: 100px;
+    min-height: 20px;
+}
+
+#tipoP1,#tipoP2{
+    text-transform: lowercase;
+}
+#nombP1:first-letter{
+    text-transform: uppercase;
+}
+/*  FIN Pagina final formulario_envio_historia */
+
+/* Modulos de asistente envio historia */
+#tapP1,#tabP2,#botonesMagicos,#resultadoMagico,#contenedorAsistente,#cuadroTexto{
+    display: none;
+}
+#botonesMagicos{
+    padding: 0;
+    border-radius: 20px;
+    top: 60px;
+    width: 90vw;
+    height: 80px;
+}
+#cuadroTexto{
+    height: 72vh;
+    top: 140px;
+    width: 90vw;
+}
+#contenedorAsistente{
+    display: block;
+}
+.dialogs{
+    font-size: 1.5em;
+    width: 80vw;/*900px*/
+    font-family: helvetica;
+    color: #D4D4D4;
+    padding:  30px;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-top: 1px solid white;
+}
+.dialogs hr{
+    border-color: black;
+}
+.tituloAsistente{
+    font-size: 30px;
+    font-weight: bold;
+}
+.subTiAsistente{
+    font-weight: bold;
+}
+.btnAsistente{
+    color: white;
+    position: fixed;
+    right: 15px;
+    bottom: 12px;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 5px;
+}
+.btnAsistente:hover{
+    background-color: #262626;
+}
+
+#tabP1 input{
+    position: fixed;;
+    right: 15px;
+    bottom: 12px;
+    font-size: 20px;
+    height: 100px;
+}
+#tapP1 {
+    font-size: 1.5em;
+    width: 80vw; /*  900px */
+    font-family: helvetica;
+    color: #D4D4D4;
+}
+
+#tapP1 table{
+    font-size: 1.7vw;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+#tapP1>table>tbody>tr>td{
+    border-right: 2px solid black;
+}
+#tapP1>table>tbody>tr>td:last-child{
+    border-right: none
+}
+
+
+.tabBotones *{
+    font-size: 1.2vmax;
+}
+.tabBotones tr td{
+    width: 200px;
+}
+.tabBotones th{
+    font-size: 1vmax;
+}
+li{list-style: circle}
+
+/* FIN Modulos de asistente envio historia */
+
+/* Formulario Registro usuario  */
+#commentForm {
+    width: 500px;
+}
+#commentForm label {
+    width: 250px;
+}
+#commentForm label.error, #commentForm input.submit {
+    margin-left: 253px;
+}
+#signupForm {
+    width: 350px;
+}
+#signupForm label.error {
+    margin-left: 10px;
+    width: auto;
+    display: block;
+}
+#newsletter_topics label.error {
+    display: none;
+    margin-left: 103px;
+}
+/*  FIN Formulario Registro usuario  */
+
+/* Seleccion modos/Panel de Usuario/Login/Envio_historia/index */
+#contenedorVideo{
+    background-color: #0d5053;
+    width: 100%;
+    height: 100%;
+}
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.15;
+}
+#background, #thunderLayer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+#thunderLayer{
+    opacity: 0;
+}
+.centered{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centeredHorizontal{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+}
+#contenedorModos{
+    width: 900px;
+}
+.modos{
+    position: relative;
+    float: left;
+    min-width: 400px;
+    margin-left: 20px;
+    border: 5px solid black;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    color: grey;
+    background-color: black;
+}
+.only{
+    float: none;
+    z-index: 10;
+    border-radius: 100%;
+    border: 5px solid black;
+    background-color: transparent;
+    color: black;
+    width: 110px;
+    padding:20px;
+    min-width: 0;
+    border-color: black;
+    margin-left: 41%;
+}
+.doorsvg{
+    width: 100px;
+}
+img.logo{
+    position: absolute;
+    opacity: 0.2;
+    z-index: -2;
+    width: 160px;
+}
+.only:hover{
+    opacity: 0;
+}
+
+.modos:hover{
+    color: white;
+}
+
+#panelUsuDetalle{
+    position: relative;
+    float: left;
+    top: 10vh;
+    width: 60vw;   /* 900x500*/
+    height: 65vh;
+    margin-left: 2vw;
+    border: 5px solid #121212;
+    padding: 5px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 4vmin;
+    color: #121212;
+    background-color: rgba(125, 125, 125, 0.29);
+}
+#panelUsuDetalle .tit{
+    position: relative;
+    font-size: 5vmin;
+    top: 10px;
+    left: 10px;
+}
+#panelUsuDetalle hr{
+    border-color: black;
+}
+#panelUsuDetalle .btnAsistente {
+    font-size: 1.3vw;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* Todas excepto LECTURA HISTORIA */
+body{
+    /* background-image: url(../Assets/img/fondoLogin.jpg); */
+    background-color: black;
+    background-position: center center;           /*Bg completamente centrado*/
+    background-repeat: no-repeat;                   /*Evita repeticiones*/
+    background-size: cover;                              /*Provoca que bg cubra todo*/
+    background-attachment: fixed;                   /*Si hay contenido mas alto, bg fijo*/
+    margin: 0;
+    overflow: hidden;
+}
+
+/* FIN Seleccion modos/Panel de Usuario/Login */
+
+/* Panel superior todas paginas */
+#panelUsu{
+    position: fixed;
+    right: 0;
+    top: -45px;
+    min-width:100px;
+    min-height: 25px;
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: white;
+    border-bottom-left-radius: 10px;
+    z-index: 5;
+    text-align: center;
+}
+#panelDireccion{
+    position: fixed;
+    left: 3px;
+    top: -150px;
+    width: 50px;
+    height: 195px;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 25;
+}
+#panelDireccion a{
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+}
+#panelDireccion #menu{
+    bottom: 160px;
+}
+#panelDireccion #refresh{
+    bottom: 125px;
+}
+#panelDireccion #home{
+    bottom: 85px;
+}
+#panelDireccion #icoMute{
+    bottom: 45px;
+}
+#panelDireccion #arrow{
+    bottom: 5px;
+}
+#panelUsu:hover{cursor: url(../Assets/img/cursor2Select.png), auto;}
+
+/* FIN Panel superior todas paginas */
+
+#alertaOn{
+    display: none;
+}
+/* Provoca un fadein al pulsar en LEER (seleccion_modo) */
+#fondoNegro{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    left:0;
+    top:0;
+    margin: 0;
+    /*display:none; */
+}
+
+/* VERSION MOVIL  =====================================   */
+/* Movil Portrait */
+@media screen and (min-width:0px) and (max-width:480px) and (orientation: portrait){
+    #contenedorModos {
+        width: 425px;
+        margin-left: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-37%, -50%);
+    }
+    #contenedorAsistente{
+        font-size: 20px;
+    }
+    .modos{
+        margin-left: 0vw;
+        margin-bottom: 20px;
+        min-width: 300px;
+    }
+    /* puerta pprincipal */
+    .only{
+        margin-left: 18%;
+        margin-bottom: 0;
+        min-width: 0;
+    }
+    .logo{
+        margin-left: -13%;
+    }
+
+    /* Asistente escritor */
+    #tapP1{
+        font-size: 2.2vmax;
+    }
+    #tapP1 table{
+        font-size: 2vmax;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #tapP1 table{
+        min-width: 300px;
+    }
+    #tapP1 td{
+        display: block;
+    }
+    #tapP1>table>tbody>tr>td{
+        border-right: none;
+    }
+    /* seccion envio historia final*/
+
+    /* Seccion botones magicos */
+    #cuadroTexto td{
+        display: block;
+    }
+    /* Caja inferior contenedora textarea y resultado */
+    #cuadroTexto{
+        overflow-x: auto;
+        top: 38vh;
+        height: 52vh;
+    }
+    .contenidoAsistente>table>tbody>tr>td{
+        display: block;
+    }
+    /* Botones magicos generos */
+    #botonesMagicos{
+        top: 120px;
+        left: 50vw;
+        height: 32vh;
+        min-height: 150px;
+        width: 100%;
+    }
+    .tabBotones th{
+        font-size: 1.7vmax;
+    }
+    .tabBotones button{
+        font-size: 2vmax;
+    }
+    /* TEXTAREA donde escribe autor y donde se ve codificado */
+    #historia, #resultado{
+        width: 80vw;
+    }
+    /* Boton ENVIAR CUENTO */
+    #enviaCuento{
+        position: absolute;
+        left: 80vw;
+        font-size: 2vmax;
+        bottom: -75vh;
+    }
+    /* fin seccion envio historia final*/
+
+    /* Panel detalle usuario */
+    #panelUsuDetalle{
+
+        width: 70vw;   /* 900x500*/
+        height: 40vh;
+
+        border: 5px solid #121212;
+        font-size: 14px;
+    }
+    #panelUsuDetalle .tit{
+        position: relative;
+        font-size: 16px;
+        top: 10px;
+        left: 10px;
+    }
+    #panelUsuDetalle .btnAsistente {
+        font-size: 10px;
+    }
+
+}
+/* Movil Landscape */
+@media screen and (min-width:481px) and (max-width:736px) and (orientation: landscape){
+    #contenedorModos {
+        width: 425px;
+        margin-left: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-37%, -50%);
+    }
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #contenedorAsistente{
+        font-size: 20px;
+    }
+    .modos{
+        margin-left: 0vw;
+        margin-bottom: 20px;
+        min-width: 300px;
+    }
+
+    /* Asistente escritor */
+    #tapP1{
+        font-size: 2.2vmax;
+    }
+    #tapP1 table{
+        font-size: 2vmax;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #tapP1 table{
+        width: 100px;
+    }
+
+    .contenidoAsistente {
+        font-size: 14px;
+    }
+    #tapP1>table {
+        font-size: 14px;
+    }
+    #tapP1 input{
+        width: 80px;
+    }
+
+    #tapP1>table>tbody>tr>td{
+        border-right: none;
+    }
+    /* seccion envio historia final*/
+
+    /* Seccion botones magicos */
+    #cuadroTexto td{
+        display: block;
+    }
+    /* Caja inferior contenedora textarea y resultado */
+    #cuadroTexto{
+        overflow-x: auto;
+        top: 220px;
+        height: 52vh;
+        position: relative
+
+    }
+    .contenidoAsistente>table>tbody>tr>td{
+        display: block;
+    }
+    /* Botones magicos generos */
+    #botonesMagicos{
+        top: 120px;
+        left: 50vw;
+        height: 32vh;
+        min-height: 180px;
+        width: 100%;
+    }
+    .tabBotones th{
+        font-size: 1.7vmax;
+    }
+    .tabBotones button{
+        font-size: 2vmax;
+    }
+    /* TEXTAREA donde escribe autor y donde se ve codificado */
+    #historia, #resultado{
+        width: 80vw;
+    }
+    /* Boton ENVIAR CUENTO */
+    #enviaCuento{
+        position: absolute;
+        left: 80vw;
+        font-size: 2vmax;
+        bottom: -85vh;
+    }
+    /* fin seccion envio historia final*/
+    /* Panel de registro */
+    form.cmxform * {
+        font-size: 12px;
+    }
+}
+
+/*  VERSION TABLET =====================================  */
+/* Portrait */
+@media screen and (min-width:481px) and (max-width:960px) and (orientation: portrait){
+    /* Pagina seleccion modos */
+    #contenedorModos {
+        width: 425px;
+        margin-left: 0;
+    }
+    .modos{
+        margin-left: 0vw;
+        margin-bottom: 20px;
+    }
+        /* puerta pprincipal */
+    .only{
+        margin-left: 31%;
+        margin-bottom: 0;
+    }
+
+    /* Asistente escritor */
+    #tapP1{
+        font-size: 16px;
+        height: 80vh;
+        top: 50vh;
+        min-height: 400px;
+    }
+    .dialogs {
+        font-size: 16px;
+    }
+    /* Inputs NOMBRE Y TIPO*/
+    table input{
+        width: 30vw;
+        min-width: 100px;
+        min-height:10px;
+        height: 4vh;
+    }
+    #tapP1 table{
+        font-size: 2vmin;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #tapP1 table{
+        min-width: 300px;
+    }
+
+    #tapP1 td{
+        display: block;
+    }
+    #tapP1>table>tbody>tr>td{
+        border-right: none;
+    }
+
+
+    /* Seccion botones magicos */
+    #cuadroTexto td{
+        display: block;
+    }
+    /* Caja inferior contenedora textarea y resultado */
+    #cuadroTexto{
+        overflow: auto;
+        top: 280px;
+        height: 52vh;
+    }
+    .contenidoAsistente>table>tbody>tr>td{
+        display: block;
+    }
+    /* Botones magicos generos */
+    #botonesMagicos{
+        top: 140px;
+        height: 240px;
+    }
+    .tabBotones th{
+        font-size: 1.7vmax;
+    }
+    .tabBotones button{
+        font-size: 2vmax;
+    }
+    /* TEXTAREA donde escribe autor y donde se ve codificado */
+    #historia, #resultado{
+        width: 80vw;
+    }
+    /* Boton ENVIAR CUENTO */
+    #enviaCuento{
+        position: absolute;
+        left: 80vw;
+        font-size: 2vmax;
+        bottom: -65vh;
+    }
+    /* Panel usuario detalle */
+    #panelUsuDetalle .btnAsistente {
+        font-size: 12px;
+    }
+    #panelUsuDetalle{
+        font-size: 2vh;
+        height: 40vh;
+    }
+}
+/* Landscape */
+@media screen and (min-width:736px) and (max-width:1024px) and (orientation: landscape){
+    /* Pagina seleccion modos */
+    #contenedorModos {
+        width: 425px;
+        margin-left: 0;
+    }
+    .modos{
+        margin-left: 0vw;
+        margin-bottom: 20px;
+    }
+     /* puerta pprincipal */
+    .only{
+        margin-left: 31%;
+        margin-bottom: 0;
+    }
+
+    /* Asistente escritor */
+    #tapP1{
+        font-size: 13px;
+        height: 82vh;
+        top: 50vh;
+        /*min-height: 400px;*/
+    }
+    /* Inputs NOMBRE Y TIPO*/
+    table input{
+        width: 30vw;
+        min-width: 100px;
+        min-height:10px;
+        height: 4vh;
+    }
+    #tapP1 table{
+        font-size: 2vmin;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #tapP1 table{
+        min-width: 300px;
+    }
+
+    #tapP1 td{
+        display: block;
+    }
+    #tapP1>table>tbody>tr>td{
+        border-right: none;
+    }
+    .dialogs {
+        font-size: 1em;}
+
+
+    /* Seccion botones magicos */
+    #cuadroTexto td{
+        display: block;
+    }
+    /* Caja inferior contenedora textarea y resultado */
+    #cuadroTexto{
+        overflow: auto;
+        top: 40vh;
+        height: 52vh;
+        position: relative;
+    }
+    .contenidoAsistente>table>tbody>tr>td{
+        display: block;
+    }
+    /* Botones magicos generos */
+    #botonesMagicos{
+        top: 20vh;
+        height: 39vh; /* 240px*/
+    }
+    .tabBotones th{
+        font-size: 1.7vmax;
+    }
+    .tabBotones button{
+        font-size: 1.5vmax;
+    }
+    /* TEXTAREA donde escribe autor y donde se ve codificado */
+    #historia, #resultado{
+        width: 80vw;
+    }
+    /* Boton ENVIAR CUENTO */
+    #enviaCuento{
+        position: absolute;
+        left: 80vw;
+        font-size: 13px;
+        bottom: -73vh;
+    }
+    body{
+        overflow-y: auto;
+    }
+}

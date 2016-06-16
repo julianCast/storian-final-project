@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block contenidoCentral %}
+    <div id="mainForm" class="centered" style="text-align: center">
+        <form class="cmxform" id="loginForm" method="post" action="acceso" style="width: 260px">
+            <fieldset>
+                <center><h2><legend>Acceso usuario</legend></h2></center>
+                <p>
+                    <label for="username">Nombre de usuario</label><br>
+                    <input id="username" name="username" type="text">
+                </p>
+                <p>
+                    <label for="password">Contraseña</label><br>
+                    <input id="password" name="password" type="password">
+                </p>
+                <p>
+                    <input class="submit" type="submit" value="Conectar" >
+                    <input class="submit"  id="registro" type="button" value="Registrar" >
+                </p>
+            </fieldset>
+        </form>
+    </div>
+{% endblock contenidoCentral %}
