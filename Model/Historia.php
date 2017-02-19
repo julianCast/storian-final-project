@@ -112,8 +112,15 @@ class Historia {
             $language = "es";
         }
         $conexion = StorianDB::connectDB();
-        $query = $conexion->query("SELECT * FROM cuento WHERE lang='".$language."'  ORDER BY RAND() LIMIT 1");
+        $query = $conexion->query("SELECT * FROM cuento ORDER BY RAND() LIMIT 1");
         return $tabla = $query->fetchObject();
+    }
+
+    // It returns collection length from specific language
+    public function storiesLength($language) {
+        $conexion = StorianDB::connectDB();
+        $query = $conexion->query("SELECT * FROM `cuento`");
+        return $query->rowCount();
     }
 
 

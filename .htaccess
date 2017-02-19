@@ -26,7 +26,8 @@ RewriteRule cierraSesion$ Controller/cierraSesion.php
 RewriteRule grabaHistoria$ Controller/grabarHistoria.php
 
 # API Controllers
-RewriteRule api/getStory$ Controller/api/getStory.php
+RewriteRule api/get-story$ Controller/api/getStory.php
+RewriteRule api/get-stories-length$ Controller/api/getStoriesLength.php
 
 # Ver PHP errors
 php_flag display_errors off

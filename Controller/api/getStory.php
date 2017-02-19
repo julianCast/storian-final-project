@@ -72,15 +72,17 @@ if ($lang == "es") {
 do {
   $rndStory = Historia::random($lang);
 } while (!_isStoryUnique($rndStory->id));
-
-$historia = new Historia($rndStory->id, $rndStory->titulo, $rndStory->contenido, $rndStory->autor, $rndStory->fecha);
+// Get specific language
+$langTitle = "titulo-".$lang;
+$langStory = "contenido-".$lang;
+$historia = new Historia($rndStory->id, $rndStory->$langTitle, $rndStory->$langStory, $rndStory->autor, $rndStory->fecha);
 
 // Aumentar numero de Cuentos leidos por ese user
 // $usuario = new Usuario($usuarioSes,"","","","","");
 // $usuario->addNumLeidos();
 
 // Get story info
-  $tittle = $historia->getTitulo();
+  $title = $historia->getTitulo();
   $storyText = $historia->getContenido();
   $author = $historia->getAutor();
 
@@ -88,29 +90,29 @@ $historia = new Historia($rndStory->id, $rndStory->titulo, $rndStory->contenido,
     // Spanish attributes
     if ( $lang == "es" ) {
       // Character #1
-      $tittle = str_replace("artDetP1m",$artDetP1m,$tittle);
-      $tittle = str_replace("artDetP1",$artDetP1,$tittle);
-      $tittle = str_replace("oaP1",$oaP1,$tittle);
-      $tittle = str_replace("detIndP1",$detIndP1,$tittle);
+      $title = str_replace("artDetP1m",$artDetP1m,$title);
+      $title = str_replace("artDetP1",$artDetP1,$title);
+      $title = str_replace("oaP1",$oaP1,$title);
+      $title = str_replace("detIndP1",$detIndP1,$title);
       $storyText = str_replace("artDetP1m",$artDetP1m,$storyText);
       $storyText = str_replace("artDetP1",$artDetP1,$storyText);
       $storyText = str_replace("oaP1",$oaP1,$storyText);
       $storyText = str_replace("detIndP1",$detIndP1,$storyText);
       // Character #2
-      $tittle = str_replace("artDetP2m",$artDetP2m,$tittle);
-      $tittle = str_replace("artDetP2",$artDetP2,$tittle);
-      $tittle = str_replace("oaP2",$oaP2,$tittle);
-      $tittle = str_replace("detIndP2",$detIndP2,$tittle);
+      $title = str_replace("artDetP2m",$artDetP2m,$title);
+      $title = str_replace("artDetP2",$artDetP2,$title);
+      $title = str_replace("oaP2",$oaP2,$title);
+      $title = str_replace("detIndP2",$detIndP2,$title);
       $storyText = str_replace("artDetP2m",$artDetP2m,$storyText);
       $storyText = str_replace("artDetP2",$artDetP2,$storyText);
       $storyText = str_replace("oaP2",$oaP2,$storyText);
       $storyText = str_replace("detIndP2",$detIndP2,$storyText);
 
       // Place
-      $tittle = str_replace("artDetLum",$artDetLum,$tittle);
-      $tittle = str_replace("artDetLu",$artDetLu,$tittle);
-      $tittle = str_replace("oaLu",$oaLu,$tittle);
-      $tittle = str_replace("detIndLu",$detIndLu,$tittle);
+      $title = str_replace("artDetLum",$artDetLum,$title);
+      $title = str_replace("artDetLu",$artDetLu,$title);
+      $title = str_replace("oaLu",$oaLu,$title);
+      $title = str_replace("detIndLu",$detIndLu,$title);
       $storyText = str_replace("artDetLum",$artDetLum,$storyText);
       $storyText = str_replace("artDetLu",$artDetLu,$storyText);
       $storyText = str_replace("oaLu",$oaLu,$storyText);
@@ -119,31 +121,31 @@ $historia = new Historia($rndStory->id, $rndStory->titulo, $rndStory->contenido,
     }
     // Common attributes 
       // Character #1
-      $tittle = str_replace("nombP1i",$nameP1,$tittle);
-      $tittle = str_replace("tipoP1i",$typeP1,$tittle);
-      $tittle = str_replace("pronP1",$pronP1,$tittle);
-      $tittle = str_replace("neutP1",$neutP1,$tittle);
+      $title = str_replace("nombP1i",$nameP1,$title);
+      $title = str_replace("tipoP1i",$typeP1,$title);
+      $title = str_replace("pronP1",$pronP1,$title);
+      $title = str_replace("neutP1",$neutP1,$title);
       $storyText = str_replace("nombP1i",$nameP1,$storyText);
       $storyText = str_replace("tipoP1i",$typeP1,$storyText);
       $storyText = str_replace("pronP1",$pronP1,$storyText);
       $storyText = str_replace("neutP1",$neutP1,$storyText);
 
       // Character #2
-      $tittle = str_replace("nombP2i",$nameP2,$tittle);
-      $tittle = str_replace("tipoP2i",$typeP2,$tittle);
-      $tittle = str_replace("pronP2",$pronP2,$tittle);
-      $tittle = str_replace("neutP2",$neutP2,$tittle);
+      $title = str_replace("nombP2i",$nameP2,$title);
+      $title = str_replace("tipoP2i",$typeP2,$title);
+      $title = str_replace("pronP2",$pronP2,$title);
+      $title = str_replace("neutP2",$neutP2,$title);
       $storyText = str_replace("nombP2i",$nameP2,$storyText);
       $storyText = str_replace("tipoP2i",$typeP2,$storyText);
       $storyText = str_replace("pronP2",$pronP2,$storyText);
       $storyText = str_replace("neutP2",$neutP2,$storyText);
       // Place
-      $tittle = str_replace("nomLui",$placeName,$tittle);
+      $title = str_replace("nomLui",$placeName,$title);
       $storyText = str_replace("nomLui",$placeName,$storyText);
 
   // Send data as array
   $arrayHistoria = array(
-      "tittle" => $tittle,
+      "title" => $title,
       "story" => $storyText,
       "author" => $author,
       "storyID" => $rndStory->id
