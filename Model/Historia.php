@@ -107,9 +107,12 @@ class Historia {
         return json_encode($out);
     }
     // Devuelve un cuento random.
-    public static function random(){
+    public static function random($language){
+        if (!$language) {
+            $language = "es";
+        }
         $conexion = StorianDB::connectDB();
-        $query = $conexion->query("SELECT * FROM cuento ORDER BY RAND() LIMIT 1");
+        $query = $conexion->query("SELECT * FROM cuento WHERE lang='".$language."'  ORDER BY RAND() LIMIT 1");
         return $tabla = $query->fetchObject();
     }
 

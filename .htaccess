@@ -25,6 +25,9 @@ RewriteRule baja$ Controller/eliminaCuenta.php
 RewriteRule cierraSesion$ Controller/cierraSesion.php
 RewriteRule grabaHistoria$ Controller/grabarHistoria.php
 
+# API Controllers
+RewriteRule api/getStory$ Controller/api/getStory.php
+
 # Ver PHP errors
 php_flag display_errors off
 php_value error_reporting 6143
