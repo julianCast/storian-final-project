@@ -2,11 +2,9 @@
 /*
  * Procesa los datos recibidos de estructura.js a traves de ajax y crea la historia con las caracteristicas elegidas por el user.
  */
-require_once '../Model/Historia.php';
-require_once '../Model/Personaje.php';
-require_once '../Model/Lugar.php';
-require_once '../Model/Usuario.php';
-require_once '../Controller/sesionCheck.php';
+require_once '../../Model/Historia.php';
+require_once '../../Model/Personaje.php';
+require_once '../../Model/Lugar.php';
 
 /* 
 PARAMETERS RECEIVED
@@ -69,12 +67,23 @@ if ($lang == "es") {
 }
 
 // Get random story from DB
-do {
+if ($readStories) {
+  do {
+    $rndStory = Historia::random($lang);
+  } while (!_isStoryUnique($rndStory->id));
+} else {
   $rndStory = Historia::random($lang);
-} while (!_isStoryUnique($rndStory->id));
+}
+
 // Get specific language
-$langTitle = "titulo-".$lang;
-$langStory = "contenido-".$lang;
+if ($lang == "es") {
+  $langTitle = titulo_es;
+  $langStory = contenido_es;
+} else {
+  $langTitle = titulo_en;
+  $langStory = contenido_en;
+}
+
 $historia = new Historia($rndStory->id, $rndStory->$langTitle, $rndStory->$langStory, $rndStory->autor, $rndStory->fecha);
 
 // Aumentar numero de Cuentos leidos por ese user

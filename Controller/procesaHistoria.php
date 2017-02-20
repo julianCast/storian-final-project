@@ -42,7 +42,7 @@ $lugar = new Lugar($nomLui);
         }
 // Selecciona historia random de DB
 $historiaRnd = Historia::random();
-$historia = new Historia($historiaRnd->id, $historiaRnd->titulo, $historiaRnd->contenido, $historiaRnd->autor, $historiaRnd->fecha);
+$historia = new Historia($historiaRnd->id, $historiaRnd->titulo_es, $historiaRnd->contenido_es, $historiaRnd->autor, $historiaRnd->fecha);
 
 // Aumentar numero de Cuentos leidos por ese user
 $usuario = new Usuario($usuarioSes,"","","","","");
