@@ -9,13 +9,13 @@ require_once '../../Model/Lugar.php';
 /* 
 PARAMETERS RECEIVED
 */
-$nameP1 = $_POST['nameP1'];
-$typeP1 = $_POST['typeP1'];
+$nameP1 = ucfirst(strtolower($_POST['nameP1']));
+$typeP1 = strtolower($_POST['typeP1']);
 $sexP1 = $_POST['sexP1'];
-$nameP2 = $_POST['nameP2'];
-$typeP2 = $_POST['typeP2'];
+$nameP2 = ucfirst(strtolower($_POST['nameP2']));
+$typeP2 = strtolower($_POST['typeP2']);
 $sexP2 = $_POST['sexP2'];
-$placeName = $_POST['place'];
+$placeName = strtolower($_POST['place']);
 
 // Stories already read by user
 $readStories = $_POST['read_stories'];
@@ -159,6 +159,7 @@ $historia = new Historia($rndStory->id, $rndStory->$langTitle, $rndStory->$langS
       "author" => $author,
       "storyID" => $rndStory->id
   );
+  header('Content-Type: application/json');
 
   echo json_encode($arrayHistoria);
 
