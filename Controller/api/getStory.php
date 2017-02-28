@@ -164,12 +164,3 @@ $historia = new Historia($rndStory->id, $rndStory->$langTitle, $rndStory->$langS
 
   echo json_encode($arrayHistoria);
 
-// Check if @id parameter is found in array
-  // function _isStoryUnique($id) {
-  //   foreach ($readStories as &$key) {
-  //     if ($id != $key) {
-  //       return true;
-  //       break;
-  //     } 
-  //   }
-  // }
