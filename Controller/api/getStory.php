@@ -18,7 +18,7 @@ $sexP2 = $_POST['sexP2'];
 $placeName = strtolower($_POST['place']);
 
 // Stories already read by user
-$readStories = $_POST['read_stories'];
+ $readStories = $_POST['read_stories'];
 // Language user 
 $lang = $_POST['lang'];
 
@@ -67,10 +67,10 @@ if ($lang == "es") {
 }
 
 // Get random story from DB
-if ($readStories) {
+if (count($readStories) > 0) {
   do {
     $rndStory = Historia::random($lang);
-  } while (!_isStoryUnique($rndStory->id));
+  } while (array_search($rndStory->id, $readStories) != FALSE);
 } else {
   $rndStory = Historia::random($lang);
 }
@@ -157,18 +157,19 @@ $historia = new Historia($rndStory->id, $rndStory->$langTitle, $rndStory->$langS
       "title" => $title,
       "story" => $storyText,
       "author" => $author,
-      "storyID" => $rndStory->id
+      "storyID" => $rndStory->id,
+      "test" => $readStories
   );
   header('Content-Type: application/json');
 
   echo json_encode($arrayHistoria);
 
 // Check if @id parameter is found in array
-  function _isStoryUnique($id) {
-    foreach ($readStories as &$key) {
-      if ($id != $key) {
-        return true;
-        break;
-      } 
-    }
-  }
+  // function _isStoryUnique($id) {
+  //   foreach ($readStories as &$key) {
+  //     if ($id != $key) {
+  //       return true;
+  //       break;
+  //     } 
+  //   }
+  // }
